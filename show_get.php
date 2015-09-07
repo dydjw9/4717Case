@@ -10,6 +10,14 @@ echo"startDate: ".$_GET['Startdate']."<BR>";
 echo"experience: ".$_GET['experience']."<BR>";
  
 
+$to      = 'dydjw9@gmail.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: webmaster@example.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);
 
 	
 	$smtpserver = "smtp.sina.com.cn";//SMTP服务器
@@ -28,11 +36,11 @@ echo"experience: ".$_GET['experience']."<BR>";
 
 	echo "<div style='width:300px; margin:36px auto;'>";
 	if($state==""){
-		echo "对不起，邮件发送失败！请检查邮箱填写是否有误。";
+		echo "sry";
 		echo "<a href='index.html'>点此返回</a>";
 		exit();
 	}
-	echo "恭喜！邮件发送成功！！";
+	echo "successful";
 	echo "<a href='index.html'>点此返回</a>";
 	echo "</div>";
 ?>
